@@ -7,6 +7,7 @@ st.set_page_config(
     page_title="Slide Traceability Demo",
     layout="wide"
 )
+left_column, right_column = st.columns([1, 1])
 # =====================================================
 # MOCK SLIDE DATA
 # =====================================================
@@ -130,7 +131,7 @@ st.caption(
 # -----------------------------
 # Layout
 # -----------------------------
-left_column, right_column = st.columns([1, 1])
+
 
 # =====================================================
 # LEFT COLUMN - CREATE RECORD
