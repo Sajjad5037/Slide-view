@@ -8,9 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.caption(
-    "Supports QR and barcode-based slide traceability workflows."
-)
+
 left_column, right_column = st.columns([1, 1])
 # =====================================================
 # MOCK SLIDE DATA
