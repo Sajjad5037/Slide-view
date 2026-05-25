@@ -59,6 +59,9 @@ mock_slide_records = {
 # =====================================================
 # RIGHT COLUMN - LOOKUP RECORD
 # =====================================================
+# =====================================================
+# RIGHT COLUMN - LOOKUP RECORD
+# =====================================================
 with right_column:
 
     st.subheader("Slide Lookup")
@@ -89,7 +92,6 @@ with right_column:
 
         for lifecycle_event in slide_data["lifecycle_events"]:
             st.write(f"✅ {lifecycle_event}")
-
 # -----------------------------
 # Mock Storage
 # -----------------------------
@@ -187,38 +189,6 @@ with left_column:
 # =====================================================
 # RIGHT COLUMN - LOOKUP RECORD
 # =====================================================
-with right_column:
-    st.subheader("Slide Lookup")
-
-    lookup_slide_id = st.text_input(
-        "Enter Slide ID",
-        value="SLIDE-1001"
-    )
-
-    lookup_button = st.button("Lookup Slide")
-
-    if lookup_button:
-        slide_data = st.session_state.slide_records.get(lookup_slide_id)
-
-        if slide_data:
-            st.success("Slide record found.")
-
-            st.markdown("### Slide Information")
-
-            st.write(f"**Slide ID:** {slide_data['slide_id']}")
-            st.write(f"**Batch ID:** {slide_data['batch_id']}")
-            st.write(f"**Operator:** {slide_data['operator_name']}")
-            st.write(f"**Manufacturing Date:** {slide_data['manufacturing_date']}")
-            st.write(f"**QC Status:** {slide_data['qc_status']}")
-            st.write(f"**Certificate:** {slide_data['certificate_status']}")
-
-            st.markdown("### Lifecycle Timeline")
-
-            for lifecycle_event in slide_data["lifecycle_events"]:
-                st.write(f"✅ {lifecycle_event}")
-
-        else:
-            st.error("No slide record found for the provided Slide ID.")
 
 # -----------------------------
 # Footer Notes
